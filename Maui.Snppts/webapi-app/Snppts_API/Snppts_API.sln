@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snppts_API", "Snppts_API\Snppts_API.csproj", "{A247D9A3-63EF-424E-99C0-D968093560AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A247D9A3-63EF-424E-99C0-D968093560AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A247D9A3-63EF-424E-99C0-D968093560AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A247D9A3-63EF-424E-99C0-D968093560AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A247D9A3-63EF-424E-99C0-D968093560AC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBED8741-4B0D-4305-83B7-9C584642DCEF}
+	EndGlobalSection
+EndGlobal
