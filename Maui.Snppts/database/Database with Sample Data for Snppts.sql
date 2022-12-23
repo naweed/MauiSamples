@@ -1,20 +1,7 @@
---Drop Database Snppts_DB
---GO
-
-use master
-GO
-
-CREATE LOGIN naweed WITH PASSWORD='bigStrongPwd$'
-GO
-
 Create database Snppts_DB;
 GO
 
 use Snppts_DB;
-GO
-
-CREATE USER naweed FOR LOGIN naweed   
-WITH DEFAULT_SCHEMA = dbo
 GO
 
 
@@ -105,8 +92,11 @@ BEGIN
 END
 GO
 
-GRANT EXECUTE ON [dbo].[sp_Get_All_Snippets] to naweed
-GO
+Select * from Snippet
+Select * from Snippet_Image
+Select * from Snippet_Category
+Select * from Author
+
 
 
 insert [Author] ([GitHubHandle],[FirstName],[LastName],[Website],[TwitterHandle],[GravatarHash])
