@@ -1,0 +1,220 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SnpptsApp"
+    x:Class="SnpptsApp.App">
+    <Application.Resources>
+
+
+        <!-- Colors -->
+        <Color x:Key="PageBackgroundColor">#FFFFFF</Color>
+
+        <Color x:Key="DarkColor">#2F2F2F</Color>
+        <Color x:Key="LightColor">#E5E5E5</Color>
+
+        <Color x:Key="DarkTextColor">#151515</Color>
+        <Color x:Key="LightTextColor">#F5F5F5</Color>
+
+        <Color x:Key="DarkBorderColor">#455965</Color>
+        <Color x:Key="LightBorderColor">#A5A5A5</Color>
+
+
+        <Color x:Key="TintColor">#33262626</Color>
+        <Color x:Key="LightBackgroundColor">#F7F7F7</Color>
+        <Color x:Key="IconBackgroundColor">#E6E6E6</Color>
+
+
+
+        <!-- Content Page Style -->
+        <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+            <Setter Property="NavigationPage.HasNavigationBar" Value="False" />
+            <Setter Property="BackgroundColor" Value="{StaticResource PageBackgroundColor}" />
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+
+        <!-- Navigation Page -->
+        <Style TargetType="NavigationPage" ApplyToDerivedTypes="True">
+            <Setter Property="BarBackgroundColor" Value="{StaticResource PageBackgroundColor}"/>
+            <Setter Property="BarTextColor" Value="White"/>
+            <Setter Property="BackgroundColor" Value="{StaticResource PageBackgroundColor}" />
+            <Setter Property="IconColor" Value="White" />
+        </Style>
+
+        <!-- Grid Styles -->
+        <Style TargetType="Grid">
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="RowSpacing" Value="0" />
+            <Setter Property="ColumnSpacing" Value="0" />
+            <Setter Property="VerticalOptions" Value="Fill" />
+            <Setter Property="HorizontalOptions" Value="Fill" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+        </Style>
+
+        <!-- Border Styles -->
+        <Style TargetType="Border">
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="VerticalOptions" Value="Fill" />
+            <Setter Property="HorizontalOptions" Value="Fill" />
+            <Setter Property="StrokeThickness" Value="0" />
+        </Style>
+
+
+        <!-- CollectionView Styles -->
+        <Style TargetType="CollectionView" ApplyToDerivedTypes="True">
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="ItemSizingStrategy" Value="MeasureFirstItem" />
+            <Setter Property="VerticalOptions" Value="Fill" />
+            <Setter Property="HorizontalOptions" Value="Fill" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="VerticalScrollBarVisibility" Value="Never" />
+            <Setter Property="HorizontalScrollBarVisibility" Value="Never" />
+            <Setter Property="SelectionMode" Value="None" />
+        </Style>
+
+        <!-- Icon Styles -->
+        <Style TargetType="ImageButton" x:Key="IconButtonStyle">
+            <Setter Property="HeightRequest" Value="32" />
+            <Setter Property="WidthRequest" Value="32" />
+            <Setter Property="Padding" Value="{OnPlatform Android=4, Default=2}" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="Margin" Value="0,3" />
+            <Setter Property="Aspect" Value="AspectFit" />
+            <Setter Property="CornerRadius" Value="8" />
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity" Value="1" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Disabled">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity" Value="0.5" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+
+        <Style TargetType="ImageButton" x:Key="BottomMenuButtonStyle">
+            <Setter Property="HeightRequest" Value="32" />
+            <Setter Property="WidthRequest" Value="32" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="Aspect" Value="AspectFit" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity" Value="1" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Disabled">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity" Value="0.5" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+
+        <!-- Image Styles -->
+        <Style TargetType="Image" x:Key="OSImageStyle">
+            <Setter Property="HeightRequest" Value="50" />
+            <Setter Property="WidthRequest" Value="50" />
+            <Setter Property="Aspect" Value="AspectFit" />
+            <Setter Property="Margin" Value="6,0" />
+        </Style>
+
+        <!-- Button Styles -->
+        <Style TargetType="Button" x:Key="TextButtonStyle">
+            <Setter Property="FontFamily" Value="RegularFont" />
+            <Setter Property="TextColor" Value="{StaticResource DarkTextColor}" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="BorderColor" Value="Transparent" />
+            <Setter Property="Padding" Value="0" />
+        </Style>
+
+        <!-- Regular Label Styles -->
+        <Style TargetType="Label" x:Key="BaseRegularDarkLabelTextStyle">
+            <Setter Property="LineBreakMode" Value="TailTruncation" />
+            <Setter Property="FontAutoScalingEnabled" Value="False" />
+            <Setter Property="FontFamily" Value="RegularFont" />
+            <Setter Property="TextColor" Value="{StaticResource DarkTextColor}" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="RegularDarkText12" BasedOn="{StaticResource BaseRegularDarkLabelTextStyle}">
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="RegularDarkText14" BasedOn="{StaticResource BaseRegularDarkLabelTextStyle}">
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="RegularDarkText16" BasedOn="{StaticResource BaseRegularDarkLabelTextStyle}">
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="RegularDarkText28" BasedOn="{StaticResource BaseRegularDarkLabelTextStyle}">
+            <Setter Property="FontSize" Value="28" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="RegularLightText12" BasedOn="{StaticResource BaseRegularDarkLabelTextStyle}">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="RegularLightText14" BasedOn="{StaticResource BaseRegularDarkLabelTextStyle}">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="RegularLightText16" BasedOn="{StaticResource BaseRegularDarkLabelTextStyle}">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        </Style>
+
+        <!-- Medium Label Style -->
+        <Style TargetType="Label" x:Key="BaseMediumDarkLabelTextStyle">
+            <Setter Property="LineBreakMode" Value="TailTruncation" />
+            <Setter Property="FontAutoScalingEnabled" Value="False" />
+            <Setter Property="FontFamily" Value="MediumFont" />
+            <Setter Property="TextColor" Value="{StaticResource DarkTextColor}" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="MediumDarkText18" BasedOn="{StaticResource BaseMediumDarkLabelTextStyle}">
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="MediumDarkText12" BasedOn="{StaticResource BaseMediumDarkLabelTextStyle}">
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="MediumLightText14" BasedOn="{StaticResource BaseMediumDarkLabelTextStyle}">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="MediumLightText18" BasedOn="{StaticResource BaseMediumDarkLabelTextStyle}">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        </Style>
+
+        <!-- Page Header Style -->
+        <Style TargetType="Label" x:Key="PageHeaderTextStyle" BasedOn="{StaticResource BaseMediumDarkLabelTextStyle}">
+            <Setter Property="FontSize" Value="22" />
+        </Style>
+        
+    </Application.Resources>
+</Application>
+
